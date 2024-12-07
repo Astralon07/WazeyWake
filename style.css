@@ -1,0 +1,244 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #F0F8FF;
+    line-height: 1.6;
+    box-sizing:border-box
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, steelblue 20%, rgb(70, 116, 131) 100%);
+    color: white;
+    text-align: center;
+    padding: 2.2rem 2rem;
+    position: sticky;
+    border-bottom: 3px solid white;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.Title {
+    display: flex;
+    justify-content: center;
+}
+header h1 {
+    position: relative;
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+header img {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    margin-left: -35px;
+    margin-right: -20px;
+    margin-top: -15px;
+}
+
+/* Navigation */
+nav ul {
+    background: linear-gradient(to right, steelblue 50%, rgb(70, 116, 131) 100%);
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #35618a;
+}
+
+/* Header2 */
+.header2 {
+    background: linear-gradient(to right, white 40%, aliceblue 100%);
+    color: steelblue;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 3px solid steelblue;
+    border-bottom: 3px solid steelblue;
+}
+
+.header2 h2 {
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.header2 p {
+    margin: 1rem 0 2rem;
+    font-size: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    background-color: #4682B4;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #35618a;
+}
+
+/* App Preview Section */
+.app-preview {
+    background: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: 2rem 0;
+    border-bottom: 3px solid steelblue;
+}
+
+.app-preview h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #4682B4;
+}
+
+.images {
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 1rem;
+}
+
+.images img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 3px solid black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    padding: 2rem;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px steelblue;
+    padding: 2.5rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px steelblue;
+}
+
+/* Download Section */
+#download {
+    background: linear-gradient(to right, steelblue 20%, rgb(70, 116, 131) 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 2rem;
+    border-bottom: 3px solid white;
+}
+
+#download h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-apk {
+    background-color: white;
+    color: #4682B4;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-apk:hover {
+    background-color: #f0f8ff;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, steelblue 20%, rgb(70, 116, 131) 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+.credits a{
+    color: white;
+    text-decoration: underline;
+}
+.credits a:hover{
+    color: rgb(94, 181, 252);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .carousel {
+        gap: 1rem;
+    }
+
+    .feature-card {
+        padding: 2rem;
+    }
+
+    #download h1 {
+        font-size: 2rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
